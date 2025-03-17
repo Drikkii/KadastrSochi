@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+:root {
+  --primary-color: black;
+  --second-color: white;
+  --third-collor: red;
+  --primary-width-1440: 90rem; /* 1440 px */
+  --primary-margin: 1.25rem; /* 20 px */
+  --margin-40: 2.5rem; /* 40 px */
+  --font-size-standart: 2rem;
+}
+
+/* header style */
+
+.header {
+  max-width: var(--primary-width-1440);
+  height: 5rem;
+  margin: o auto;
+  display: flex;
+  padding: var(--primary-margin);
+  border: 2px solid red;
+}
+.header-tittle {
+  width: 30%;
+  margin: auto 0;
+  text-align: left;
+}
+.nav-section {
+  width: 70%;
+}
+.nav {
+  padding-right: 1rem;
+  margin: 0;
+  margin-left: auto;
+  width: 45%;
+  font-size: var(--font-size-standart);
+  gap: 1rem;
+  display: flex;
+  list-style-type: none;
+}
+
+/* main content */
+.main {
+  max-width: var(--primary-width-1440);
+
+  margin: o auto;
+  padding: var(--primary-margin);
+  border: 2px solid red;
+}
+
+/* Реклама */
+.advertising {
+  max-width: var(--primary-width-1440);
+  height: 25rem;
+  margin: o auto;
+  padding: var(--primary-margin);
+  border: 2px solid red;
+  border-radius: 3rem;
+}
+/* категории услуг */
+.categories {
+  display: block;
+  flex-wrap: wrap;
+  max-width: var(--primary-width-1440);
+  margin: o auto;
+  margin-top: var(--primary-margin);
+  margin-bottom: var(--primary-margin);
+  padding: var(--primary-margin);
+  justify-content: space-around;
+  gap: 1rem;
+  border: 2px solid red;
+}
+.categories-tittle {
+  text-align: center;
+  font-size: var(--font-size-standart);
+  margin-bottom: var(--primary-margin);
+  border: 2px solid red;
+}
+.all-categories {
+  gap: 1rem;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.home {
+  width: 40rem;
+  height: 25rem;
+  border: 2px solid red;
+}
+
+/* отзывы */
+.our-reviews {
+  display: block;
+  justify-content: space-around;
+  max-width: var(--primary-width-1440);
+  margin: o auto;
+  padding: var(--primary-margin);
+  border: 2px solid red;
+}
+.reviews {
+  width: 20rem;
+  height: 10rem;
+  border: 2px solid red;
+}
+.reviews-tittle {
+  text-align: center;
+  font-size: var(--font-size-standart);
+  margin-bottom: var(--primary-margin);
+  border: 2px solid red;
+}
+.all-reviews {
+  gap: 1rem;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+/* Контакты */
+.contacts {
+  display: block;
+  flex-wrap: wrap;
+  max-width: var(--primary-width-1440);
+  margin: o auto;
+  margin-top: var(--primary-margin);
+  margin-bottom: var(--primary-margin);
+  padding: var(--primary-margin);
+  justify-content: space-around;
+  gap: 1rem;
+  border: 2px solid red;
+}
+.contacts-tittle {
+  text-align: center;
+  font-size: var(--font-size-standart);
+  margin-bottom: var(--primary-margin);
+  border: 2px solid red;
+}
+.our-contacts {
+  gap: 1rem;
+  max-width: var(--primary-width-1440);
+  margin: o auto;
+  display: flex;
+}
+.text-contact {
+  width: 30rem;
+  height: 20rem;
+  border: 2px solid red;
+}
+.map {
+  width: 50rem;
+  height: 20rem;
+  border: 2px solid red;
+}
+/* ФУТТЕР */
+
+.footer {
+  max-width: var(--primary-width-1440);
+  height: 10rem;
+  margin: o auto;
+  border: 2px solid red;
+  margin-bottom: 1rem;
+}
