@@ -57,12 +57,60 @@ html {
 
 /* Реклама */
 .advertising {
+  position: relative;
+  display: flex;
+  overflow: hidden;
   max-width: var(--primary-width-1440);
   height: 25rem;
-  margin: o auto;
-  padding: var(--primary-margin);
   border: 2px solid red;
   border-radius: 3rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider {
+  width: calc(100% * 5);
+  display: flex;
+}
+
+.slide {
+  flex: 0 0 100%;
+  border-radius: 3rem;
+}
+
+.imgSlide {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.slider-btn {
+  position: absolute;
+  top: 0;
+  width: 4%;
+  height: 100%;
+  background: transparent;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, opacity 0.3s;
+  z-index: 10;
+}
+
+.slider-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
 }
 /* категории услуг */
 .categories {
@@ -90,9 +138,23 @@ html {
 }
 
 .home {
+  cursor: pointer;
+  display: inline-block;
   width: 40rem;
   height: 25rem;
   border: 2px solid red;
+  background-image: url(/img/House.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out, 0.3s ease-in-out;
+  transform: translateY(-5px);
+}
+
+.home:hover {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.8); /* Увеличиваем тень */
+  transform: translateY(-0px);
 }
 
 /* отзывы */
