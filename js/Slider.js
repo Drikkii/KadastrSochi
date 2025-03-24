@@ -1,6 +1,6 @@
 // время чеерз которое перелистывание АВТО
-// const SliderTimer = 1000; //Задержка перед сл слайдом в мили секундах
-// const SliderSpeed = 1; //время на перелистывание слайда в секундах
+const SliderTimer = 5000; //Задержка перед сл слайдом в мили секундах
+const SliderSpeed = 2; //время на перелистывание слайда в секундах
 // Код слайдера !
 document.addEventListener("DOMContentLoaded", function () {
   const slider = document.querySelector(".slider");
