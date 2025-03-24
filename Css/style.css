@@ -143,7 +143,7 @@ html {
   width: 40rem;
   height: 25rem;
   border: 2px solid red;
-  background-image: url(/img/House.png);
+  background-image: url(../img/House.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
