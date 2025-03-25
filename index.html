@@ -8,15 +8,33 @@
   </head>
   <body>
     <header class="header">
-      <div class="header-tittle"><h1>TITTLE</h1></div>
-      <nav class="nav-section">
-        <ul class="nav">
-          <li>text</li>
-          <li>text</li>
-          <li>text</li>
-          <li>text</li>
-        </ul>
-      </nav>
+      <div class="headerIn">
+        <div class="header-tittle"><h1>KadastrSochi</h1></div>
+        <nav class="nav-section">
+          <ul class="nav">
+            <a href="/"><li>Главная</li></a>
+            <a href="#Service"><li>Услуги</li></a>
+            <a href="#Reviews"><li>Отзывы</li></a>
+            <a href="#Licenses"><li>Лицензии</li></a>
+            <a href="#Contacts"><li>Контакты</li></a>
+          </ul>
+        </nav>
+        <div class="icon-contact-nav">
+          <a href="https://wa.me/77777777777" target="_blank">
+            <img
+              class="whatsapp-contact-nav"
+              src="img/whatsapp.svg"
+              alt="WhatsApp"
+            />
+          </a>
+          <a href="https://t.me/username" target="_blank">
+            <img src="img/telegram.svg" alt="Telegram" />
+          </a>
+          <a href="mailto:KadastrSochi@mail.ru">
+            <img src="img/email.svg" alt="Email" />
+          </a>
+        </div>
+      </div>
     </header>
     <main class="main">
       <section class="advertising">
@@ -41,7 +59,7 @@
           </div>
         </div>
       </section>
-      <div class="triggerButton">
+      <div id="Service" class="triggerButton">
         <div class="consultationCall">Бесплатная консультация</div>
         <div class="consultationCall">Получить скидку</div>
       </div>
@@ -66,7 +84,7 @@
           </div>
         </div>
       </section>
-      <section class="our-reviews">
+      <section id="Reviews" class="our-reviews">
         <div class="reviews-tittle"><p>Отзывы клиентов</p></div>
         <div class="all-reviews">
           <div class="reviews">
@@ -77,7 +95,7 @@
           <div class="reviews"><img src="img/отзыв1.jpg" alt="" /></div>
         </div>
       </section>
-      <section class="our-licenses">
+      <section id="Licenses" class="our-licenses">
         <div class="licenses-tittle"><p>Лицензии и Сертификаты</p></div>
         <div class="all-licenses">
           <div class="licenses">
@@ -88,7 +106,7 @@
           <div class="licenses"><img src="img/отзыв1.jpg" alt="" /></div>
         </div>
       </section>
-      <section class="contacts">
+      <section id="Contacts" class="contacts">
         <div class="contacts-tittle">Contacts</div>
         <div class="our-contacts">
           <div class="text-contact">
@@ -128,7 +146,15 @@
         </div>
       </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <p>© 2025 <a href="/">KadastrSochi.ru</a> Все права защищены.</p>
+      <nav>
+        <a href="/privacy-policy.html">Политика конфиденциальности</a> |
+        <a href="/terms-of-service.html">Условия использования</a> |
+        <a href="/copyright.html">Авторское право</a>
+      </nav>
+      <p>Сайт разработан <a href="https://github.com/Drikkii">Drikki</a></p>
+    </footer>
   </body>
   <script type="module" src="js/Slider.js" defer></script>
   <script type="module" src="js/MainContent.js" defer></script>

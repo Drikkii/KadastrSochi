@@ -40,16 +40,20 @@ body {
 /* header style */
 
 .header {
+  z-index: 100;
   position: sticky;
   top: 0;
+  width: 100%;
+  background-color: white;
+  -webkit-box-shadow: 0px 8px 19px -8px rgba(34, 60, 80, 0.55);
+  -moz-box-shadow: 0px 8px 19px -8px rgba(34, 60, 80, 0.55);
+  box-shadow: 0px 8px 19px -8px rgba(34, 60, 80, 0.55);
+}
+.headerIn {
   max-width: var(--primary-width-1440);
-  height: 5rem;
-  margin: o auto;
   display: flex;
   padding: var(--primary-margin);
-  border: 2px solid red;
   background-color: white;
-  z-index: 100;
 }
 .header-tittle {
   width: 30%;
@@ -61,26 +65,64 @@ body {
 }
 .nav {
   padding-right: 1rem;
-  margin: 0;
-  margin-left: auto;
-  width: 45%;
-  font-size: var(--font-size-standart);
+  line-height: 2rem;
+  font-size: 1.5rem;
   gap: 1rem;
   display: flex;
   list-style-type: none;
+  justify-content: end;
+}
+.nav li {
+  -webkit-box-shadow: 0px 0px 21px 4px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 0px 21px 4px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 0px 21px 4px rgba(34, 60, 80, 0.2);
+  transition: 0.5s;
+  cursor: pointer;
+  margin: 0;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+}
+.nav li:hover {
+  color: white;
+  background-color: red;
+}
+.nav a {
+  color: black;
+  margin: 0;
+  text-decoration: none;
+}
+.icon-contact-nav {
+  display: flex;
+  gap: 1rem;
+}
+.whatsapp-contact-nav {
+  width: 1.7rem;
+}
+.icon-contact-nav a {
+  margin: 0;
+}
+.icon-contact-nav img {
+  transition: 0.3s;
+  cursor: pointer;
+  margin: 0;
+  height: 2rem;
+}
+.icon-contact-nav img:hover {
+  transform: scale(115%);
 }
 
 /* main content */
 .main {
   max-width: var(--primary-width-1440);
-
   margin: o auto;
   padding: var(--primary-margin);
-  border: 2px solid red;
 }
 
 /* Реклама */
 .advertising {
+  -webkit-box-shadow: 0px 0px 18px 12px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 0px 18px 12px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 0px 18px 12px rgba(34, 60, 80, 0.2);
   position: relative;
   display: flex;
   overflow: hidden;
@@ -161,6 +203,9 @@ body {
 
 /* категории услуг */
 .categories {
+  -webkit-box-shadow: 0px 0px 18px 12px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 0px 18px 12px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 0px 18px 12px rgba(34, 60, 80, 0.2);
   background-color: white;
   display: block;
   flex-wrap: wrap;
@@ -171,13 +216,11 @@ body {
   padding: var(--primary-margin);
   justify-content: space-around;
   gap: 1rem;
-  border: 2px solid red;
 }
 .categories-tittle {
   text-align: center;
   font-size: var(--font-size-standart);
   margin-bottom: var(--primary-margin);
-  border: 2px solid red;
 }
 .all-categories {
   gap: 1rem;
@@ -226,13 +269,15 @@ body {
 
 /* отзывы */
 .our-reviews {
+  -webkit-box-shadow: 0px 0px 18px 12px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 0px 18px 12px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 0px 18px 12px rgba(34, 60, 80, 0.2);
   background-color: white;
   display: block;
   justify-content: space-around;
   max-width: var(--primary-width-1440);
   margin: 0 auto;
   padding: var(--primary-margin);
-  border: 2px solid red;
 }
 .reviews {
   cursor: pointer;
@@ -255,7 +300,6 @@ body {
   text-align: center;
   font-size: var(--font-size-standart);
   margin-bottom: var(--primary-margin);
-  border: 2px solid red;
 }
 .all-reviews {
   gap: 1rem;
@@ -265,6 +309,9 @@ body {
 
 /* Лицензии */
 .our-licenses {
+  -webkit-box-shadow: 0px 0px 18px 12px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 0px 18px 12px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 0px 18px 12px rgba(34, 60, 80, 0.2);
   background-color: white;
   display: block;
   justify-content: space-around;
@@ -272,7 +319,6 @@ body {
   margin: 0 auto;
   margin-top: var(--primary-margin);
   padding: var(--primary-margin);
-  border: 2px solid red;
 }
 .licenses {
   cursor: pointer;
@@ -295,7 +341,6 @@ body {
   text-align: center;
   font-size: var(--font-size-standart);
   margin-bottom: var(--primary-margin);
-  border: 2px solid red;
 }
 .all-licenses {
   gap: 1rem;
@@ -305,23 +350,23 @@ body {
 
 /* Контакты */
 .contacts {
+  -webkit-box-shadow: 0px 0px 18px 12px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 0px 18px 12px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 0px 18px 12px rgba(34, 60, 80, 0.2);
   background-color: white;
   display: block;
   flex-wrap: wrap;
   max-width: var(--primary-width-1440);
   margin: o auto;
   margin-top: var(--primary-margin);
-  margin-bottom: var(--primary-margin);
   padding: var(--primary-margin);
   justify-content: space-around;
   gap: 1rem;
-  border: 2px solid red;
 }
 .contacts-tittle {
   text-align: center;
   font-size: var(--font-size-standart);
   margin-bottom: var(--primary-margin);
-  border: 2px solid red;
 }
 .our-contacts {
   gap: 1rem;
@@ -335,7 +380,6 @@ body {
   font-size: 1.3rem;
   width: 30rem;
   height: 25rem;
-  border: 2px solid red;
 }
 .text-contact a {
   transition: transform 0.2s ease;
@@ -377,10 +421,24 @@ body {
 /* ФУТТЕР */
 
 .footer {
+  -webkit-box-shadow: 0px 0px 18px 12px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 0px 18px 12px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 0px 18px 12px rgba(34, 60, 80, 0.2);
   background-color: white;
   max-width: var(--primary-width-1440);
   height: 4rem;
   margin: o auto;
-  border: 2px solid red;
+  display: flex;
   margin-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.footer nav {
+  text-align: center;
+  margin: 0;
+}
+.footer a {
+  cursor: pointer;
+  text-decoration: none;
 }
