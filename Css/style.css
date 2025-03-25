@@ -161,24 +161,42 @@ html {
 }
 
 .home {
-  cursor: pointer;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+
   display: inline-block;
-  width: 40rem;
+  width: 30rem;
   height: 25rem;
-  border: 2px solid red;
-  background-image: url(../img/House.png);
-  background-size: cover;
+  /* background-image: url(../img/reshot-icon-home-AX2JK9FEYM.svg);
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  background-position: center; */
+
+  /* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); */
   transition: 0.3s ease-in-out, 0.3s ease-in-out;
   transform: translateY(-5px);
 }
+.home img {
+  cursor: pointer;
+  transition: 0.5s;
+  transform: translateY(-5px);
+  width: 100%;
+  height: 80%;
+  clip-path: url(../img/reshot-icon-home-AX2JK9FEYM.svg); /* SVG-контур */
 
-.home:hover {
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.8); /* Увеличиваем тень */
-  transform: translateY(-0px);
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 2));
 }
+.home img:hover {
+  transform: translateY(-0px);
+  clip-path: url(../img/reshot-icon-home-AX2JK9FEYM.svg); /* SVG-контур */
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.1));
+}
+
+/* .home:hover {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.8);
+  transform: translateY(-0px);
+} */
 
 /* отзывы */
 .our-reviews {
