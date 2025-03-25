@@ -178,6 +178,7 @@ html {
   transform: translateY(-5px);
 }
 .home img {
+  padding-top: 1rem;
   cursor: pointer;
   transition: 0.5s;
   transform: translateY(-5px);
