@@ -17,7 +17,7 @@ html {
   --font-size-standart: 2rem;
 }
 body {
-  background-image: url(../img/cadastral_background_with_compass.png);
+  background-image: url(../img/background_for_a_website_on_cadastral_activities_where_there_should_be_a_circule_and_a_ruler_3658724372.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -40,6 +40,8 @@ body {
 /* header style */
 
 .header {
+  position: sticky;
+  top: 0;
   max-width: var(--primary-width-1440);
   height: 5rem;
   margin: o auto;
@@ -47,6 +49,7 @@ body {
   padding: var(--primary-margin);
   border: 2px solid red;
   background-color: white;
+  z-index: 100;
 }
 .header-tittle {
   width: 30%;
@@ -227,14 +230,26 @@ body {
   display: block;
   justify-content: space-around;
   max-width: var(--primary-width-1440);
-  margin: o auto;
+  margin: 0 auto;
   padding: var(--primary-margin);
   border: 2px solid red;
 }
 .reviews {
-  width: 20rem;
-  height: 10rem;
-  border: 2px solid red;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 7px 5px -4px rgba(146, 153, 159, 0.3);
+  -moz-box-shadow: 0px 7px 5px -4px rgba(146, 153, 159, 0.3);
+  box-shadow: 0px 7px 5px -4px rgba(146, 153, 159, 0.3);
+  transition: 0.3s;
+  width: 18rem;
+  height: 30rem;
+  border: 1px solid rgb(16, 13, 13);
+}
+.reviews:hover {
+  transform: scale(105%);
+}
+.reviews img {
+  width: 100%;
+  height: 100%;
 }
 .reviews-tittle {
   text-align: center;
@@ -243,6 +258,46 @@ body {
   border: 2px solid red;
 }
 .all-reviews {
+  gap: 1rem;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+/* Лицензии */
+.our-licenses {
+  background-color: white;
+  display: block;
+  justify-content: space-around;
+  max-width: var(--primary-width-1440);
+  margin: 0 auto;
+  margin-top: var(--primary-margin);
+  padding: var(--primary-margin);
+  border: 2px solid red;
+}
+.licenses {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 7px 5px -4px rgba(146, 153, 159, 0.3);
+  -moz-box-shadow: 0px 7px 5px -4px rgba(146, 153, 159, 0.3);
+  box-shadow: 0px 7px 5px -4px rgba(146, 153, 159, 0.3);
+  transition: 0.3s;
+  width: 18rem;
+  height: 30rem;
+  border: 1px solid rgb(16, 13, 13);
+}
+.licenses:hover {
+  transform: scale(105%);
+}
+.licenses img {
+  width: 100%;
+  height: 100%;
+}
+.licenses-tittle {
+  text-align: center;
+  font-size: var(--font-size-standart);
+  margin-bottom: var(--primary-margin);
+  border: 2px solid red;
+}
+.all-licenses {
   gap: 1rem;
   flex-wrap: wrap;
   display: flex;
@@ -276,11 +331,45 @@ body {
   flex-wrap: wrap;
 }
 .text-contact {
-  font-size: 2rem;
+  padding-left: 1rem;
+  font-size: 1.3rem;
   width: 30rem;
   height: 25rem;
   border: 2px solid red;
 }
+.text-contact a {
+  transition: transform 0.2s ease;
+  text-decoration: none;
+}
+.text-contact a:hover {
+  transform: scale(120%);
+}
+.text-contact-bolt {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.icon-contact {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.whatsapp-contact {
+  width: 3.6rem;
+}
+.icon-contact a {
+  margin: 0;
+}
+.icon-contact img {
+  transition: 0.3s;
+  cursor: pointer;
+  margin: 0;
+  height: 4rem;
+}
+.icon-contact img:hover {
+  transform: scale(115%);
+}
+
 .map {
   width: 50rem;
   height: 25rem;
@@ -290,7 +379,7 @@ body {
 .footer {
   background-color: white;
   max-width: var(--primary-width-1440);
-  height: 10rem;
+  height: 4rem;
   margin: o auto;
   border: 2px solid red;
   margin-bottom: 1rem;
