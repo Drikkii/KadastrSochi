@@ -24,6 +24,9 @@ body {
   background-attachment: fixed;
   scroll-behavior: smooth;
 }
+.no-hover *:hover {
+  all: unset !important;
+}
 
 /* body::before {
   content: "";
