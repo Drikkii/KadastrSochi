@@ -16,6 +16,26 @@ html {
   --margin-40: 2.5rem; /* 40 px */
   --font-size-standart: 2rem;
 }
+body {
+  background-image: url(../img/cadastral_background_with_compass.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  scroll-behavior: smooth;
+}
+
+/* body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/faded_cadastral_background.png) no-repeat center/cover;
+  opacity: 0.3;
+  z-index: -1;
+} */
 
 /* header style */
 
@@ -26,6 +46,7 @@ html {
   display: flex;
   padding: var(--primary-margin);
   border: 2px solid red;
+  background-color: white;
 }
 .header-tittle {
   width: 30%;
@@ -137,6 +158,7 @@ html {
 
 /* категории услуг */
 .categories {
+  background-color: white;
   display: block;
   flex-wrap: wrap;
   max-width: var(--primary-width-1440);
@@ -201,6 +223,7 @@ html {
 
 /* отзывы */
 .our-reviews {
+  background-color: white;
   display: block;
   justify-content: space-around;
   max-width: var(--primary-width-1440);
@@ -227,6 +250,7 @@ html {
 
 /* Контакты */
 .contacts {
+  background-color: white;
   display: block;
   flex-wrap: wrap;
   max-width: var(--primary-width-1440);
@@ -252,18 +276,19 @@ html {
   flex-wrap: wrap;
 }
 .text-contact {
+  font-size: 2rem;
   width: 30rem;
-  height: 20rem;
+  height: 25rem;
   border: 2px solid red;
 }
 .map {
   width: 50rem;
   height: 25rem;
-  border: 2px solid red;
 }
 /* ФУТТЕР */
 
 .footer {
+  background-color: white;
   max-width: var(--primary-width-1440);
   height: 10rem;
   margin: o auto;
