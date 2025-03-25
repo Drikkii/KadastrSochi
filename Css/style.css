@@ -25,7 +25,7 @@ body {
   scroll-behavior: smooth;
 }
 .no-hover *:hover {
-  all: unset !important;
+  pointer-events: none !important;
 }
 
 /* body::before {
