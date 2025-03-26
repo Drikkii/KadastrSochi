@@ -498,6 +498,9 @@ body {
 }
 
 @media (max-width: 850px) {
+  .map {
+    margin-top: 1rem;
+  }
   .consultationCall {
     width: 80%;
   }
