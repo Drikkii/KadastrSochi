@@ -5,23 +5,28 @@ const allLicenses = document.querySelector(".all-licenses");
 
 let isAnimating = false; // Флаг анимации
 
-let isClassAdded = false; // Флаг для отслеживания состояния класса
+let isClassAdded = false;
 
 function checkScreenSize() {
+  // Проверка на разрешение экрана
   if (window.innerWidth <= 1310) {
     allReviews.classList.add("height-content");
     allLicenses.classList.add("height-content");
 
     if (window.innerWidth <= 768) {
-      window.removeEventListener("resize", handleResize);
-      window.addEventListener("scroll", handleScroll);
+      // Если экран меньше или равен 768px, класс остаётся
+      if (!isClassAdded) {
+        isClassAdded = true; // Устанавливаем флаг, что класс добавлен
+      }
     } else {
-      window.removeEventListener("scroll", handleScroll);
-      window.addEventListener("resize", handleResize);
+      // Для больших экранов снимаем флаг, класс не добавляется
+      isClassAdded = false;
     }
   } else {
+    // Если экран больше 1310px, убираем класс
     allReviews.classList.remove("height-content");
     allLicenses.classList.remove("height-content");
+    isClassAdded = false;
   }
 }
 
@@ -29,16 +34,6 @@ function handleResize() {
   checkScreenSize();
   moreReviews.textContent = "Показать еще";
   moreLicenses.textContent = "Показать еще";
-}
-
-function handleScroll() {
-  if (window.innerWidth <= 768 && !isClassAdded) {
-    allReviews.classList.add("height-content");
-    allLicenses.classList.add("height-content");
-    isClassAdded = true;
-    moreReviews.textContent = "Показать еще";
-    moreLicenses.textContent = "Показать еще";
-  }
 }
 
 window.addEventListener("resize", () => {
@@ -60,7 +55,7 @@ function disableButtons() {
   isAnimating = true;
   moreReviews.disabled = true;
   moreLicenses.disabled = true;
-  setTimeout(enableButtons, 500); // Включаем кнопки
+  setTimeout(enableButtons, 500);
 }
 
 //кнопка расширить отзывы
