@@ -274,7 +274,6 @@ body {
   box-shadow: 0px 0px 18px 12px rgba(34, 60, 80, 0.2);
   background-color: white;
   display: block;
-  justify-content: space-around;
   max-width: var(--primary-width-1440);
   margin: 0 auto;
   padding: var(--primary-margin);
@@ -288,6 +287,8 @@ body {
   width: 18rem;
   height: 30rem;
   border: 1px solid rgb(16, 13, 13);
+  margin-top: var(--primary-margin);
+  margin-bottom: var(--primary-margin);
 }
 .reviews:hover {
   transform: scale(105%);
@@ -302,9 +303,22 @@ body {
   margin-bottom: var(--primary-margin);
 }
 .all-reviews {
+  transition: height 0.5s ease-in-out;
   gap: 1rem;
   flex-wrap: wrap;
   display: flex;
+}
+.button-More-reviews,
+.button-More-licenses {
+  border: none;
+  background-color: white;
+  color: blue;
+  text-align: center;
+  font-size: medium;
+  width: 35%;
+  margin: 0 auto;
+  display: none;
+  cursor: pointer;
 }
 
 /* Лицензии */
@@ -329,6 +343,8 @@ body {
   width: 18rem;
   height: 30rem;
   border: 1px solid rgb(16, 13, 13);
+  margin-top: var(--primary-margin);
+  margin-bottom: var(--primary-margin);
 }
 .licenses:hover {
   transform: scale(105%);
@@ -343,6 +359,7 @@ body {
   margin-bottom: var(--primary-margin);
 }
 .all-licenses {
+  transition: height 0.5s ease-in-out;
   gap: 1rem;
   flex-wrap: wrap;
   display: flex;
@@ -446,6 +463,28 @@ body {
 }
 
 /* MEDIA */
+@media (max-width: 1310px) {
+  .button-More-reviews,
+  .button-More-licenses {
+    display: block;
+  }
+
+  .all-reviews,
+  .all-licenses {
+    height: 68rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .height-content {
+    height: 34rem;
+  }
+  .reviews,
+  .licenses {
+    width: 70%;
+  }
+}
 @media (max-width: 1024px) {
   .footer {
     flex-direction: column;
@@ -455,5 +494,22 @@ body {
 
   .nav {
     display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .all-reviews,
+  .all-licenses {
+    height: 136rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .height-content {
+    height: 34rem;
+  }
+  .reviews,
+  .licenses {
+    width: 80%;
   }
 }
