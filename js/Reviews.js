@@ -5,25 +5,22 @@ const allLicenses = document.querySelector(".all-licenses");
 
 let isAnimating = false; // Флаг анимации
 
-let isClassAdded = false;
+let isClassAdded = false; //Флаг класса
 
+// Проверка на разрешение экрана
 function checkScreenSize() {
-  // Проверка на разрешение экрана
   if (window.innerWidth <= 1310) {
     allReviews.classList.add("height-content");
     allLicenses.classList.add("height-content");
 
     if (window.innerWidth <= 768) {
-      // Если экран меньше или равен 768px, класс остаётся
       if (!isClassAdded) {
-        isClassAdded = true; // Устанавливаем флаг, что класс добавлен
+        isClassAdded = true;
       }
     } else {
-      // Для больших экранов снимаем флаг, класс не добавляется
       isClassAdded = false;
     }
   } else {
-    // Если экран больше 1310px, убираем класс
     allReviews.classList.remove("height-content");
     allLicenses.classList.remove("height-content");
     isClassAdded = false;
@@ -36,11 +33,7 @@ function handleResize() {
   moreLicenses.textContent = "Показать еще";
 }
 
-window.addEventListener("resize", () => {
-  checkScreenSize();
-  moreReviews.textContent = "Показать еще";
-  moreLicenses.textContent = "Показать еще";
-});
+window.addEventListener("resize", handleResize);
 
 // При загрузке страницы
 document.addEventListener("DOMContentLoaded", checkScreenSize);
@@ -63,6 +56,11 @@ function disableButtons() {
 moreReviews.addEventListener("click", function () {
   disableButtons();
   allReviews.classList.toggle("height-content");
+  if (allReviews.classList.contains("height-content")) {
+    isClassAdded = true;
+  } else {
+    isClassAdded = false;
+  }
   if (moreReviews.textContent == "Показать еще") {
     moreReviews.textContent = "Скрыть";
   } else {
@@ -76,6 +74,11 @@ moreReviews.addEventListener("click", function () {
 moreLicenses.addEventListener("click", function () {
   disableButtons();
   allLicenses.classList.toggle("height-content");
+  if (allLicenses.classList.contains("height-content")) {
+    isClassAdded = true;
+  } else {
+    isClassAdded = false;
+  }
   if (moreLicenses.textContent == "Показать еще") {
     moreLicenses.textContent = "Скрыть";
   } else {
