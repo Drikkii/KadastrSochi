@@ -5,14 +5,36 @@ const allLicenses = document.querySelector(".all-licenses");
 
 let isAnimating = false; // Флаг анимации
 
-// проверяем разрешение (меняем высоту)
 function checkScreenSize() {
   if (window.innerWidth <= 1310) {
     allReviews.classList.add("height-content");
     allLicenses.classList.add("height-content");
+
+    if (window.innerWidth <= 768) {
+      window.removeEventListener("resize", handleResize);
+      window.addEventListener("scroll", handleScroll);
+    } else {
+      window.removeEventListener("scroll", handleScroll);
+      window.addEventListener("resize", handleResize);
+    }
   } else {
     allReviews.classList.remove("height-content");
     allLicenses.classList.remove("height-content");
+  }
+}
+
+function handleResize() {
+  checkScreenSize();
+  moreReviews.textContent = "Показать еще";
+  moreLicenses.textContent = "Показать еще";
+}
+
+function handleScroll() {
+  if (window.innerWidth <= 768) {
+    allReviews.classList.add("height-content");
+    allLicenses.classList.add("height-content");
+    moreReviews.textContent = "Показать еще";
+    moreLicenses.textContent = "Показать еще";
   }
 }
 
@@ -21,7 +43,19 @@ window.addEventListener("resize", () => {
   moreReviews.textContent = "Показать еще";
   moreLicenses.textContent = "Показать еще";
 });
+
 document.addEventListener("DOMContentLoaded", checkScreenSize);
+
+// проверяем разрешение (меняем высоту)
+// function checkScreenSize() {
+//   if (window.innerWidth <= 1310) {
+//     allReviews.classList.add("height-content");
+//     allLicenses.classList.add("height-content");
+//   } else {
+//     allReviews.classList.remove("height-content");
+//     allLicenses.classList.remove("height-content");
+//   }
+// }
 
 //выключаем кнопки
 function enableButtons() {
