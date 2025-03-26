@@ -498,6 +498,12 @@ body {
 }
 
 @media (max-width: 850px) {
+  .consultationCall {
+    width: 80%;
+  }
+  .sale {
+    display: none;
+  }
   .all-reviews,
   .all-licenses {
     height: 136rem;
