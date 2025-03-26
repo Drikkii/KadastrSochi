@@ -27,13 +27,13 @@ function checkScreenSize() {
   }
 }
 
-function handleResize() {
-  checkScreenSize();
-  moreReviews.textContent = "Показать еще";
-  moreLicenses.textContent = "Показать еще";
-}
+// function handleResize() {
+//   checkScreenSize();
+//   moreReviews.textContent = "Показать еще";
+//   moreLicenses.textContent = "Показать еще";
+// }
 
-window.addEventListener("resize", handleResize);
+// window.addEventListener("resize", handleResize);
 
 // При загрузке страницы
 document.addEventListener("DOMContentLoaded", checkScreenSize);
