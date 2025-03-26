@@ -5,6 +5,8 @@ const allLicenses = document.querySelector(".all-licenses");
 
 let isAnimating = false; // Флаг анимации
 
+let isClassAdded = false; // Флаг для отслеживания состояния класса
+
 function checkScreenSize() {
   if (window.innerWidth <= 1310) {
     allReviews.classList.add("height-content");
@@ -30,9 +32,10 @@ function handleResize() {
 }
 
 function handleScroll() {
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 768 && !isClassAdded) {
     allReviews.classList.add("height-content");
     allLicenses.classList.add("height-content");
+    isClassAdded = true;
     moreReviews.textContent = "Показать еще";
     moreLicenses.textContent = "Показать еще";
   }
@@ -44,18 +47,8 @@ window.addEventListener("resize", () => {
   moreLicenses.textContent = "Показать еще";
 });
 
+// При загрузке страницы
 document.addEventListener("DOMContentLoaded", checkScreenSize);
-
-// проверяем разрешение (меняем высоту)
-// function checkScreenSize() {
-//   if (window.innerWidth <= 1310) {
-//     allReviews.classList.add("height-content");
-//     allLicenses.classList.add("height-content");
-//   } else {
-//     allReviews.classList.remove("height-content");
-//     allLicenses.classList.remove("height-content");
-//   }
-// }
 
 //выключаем кнопки
 function enableButtons() {
